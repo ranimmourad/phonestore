@@ -62,7 +62,7 @@ export default function ServicesPage() {
                 <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-brand-600/20 blur-[80px] group-hover:bg-brand-500/40 transition" />
                 <div className="relative">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center shadow-[0_10px_30px_-10px_rgba(11,103,255,.6)]">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center">
                       <I size={24} />
                     </div>
                     <div>
@@ -108,7 +108,7 @@ export default function ServicesPage() {
               <a href="tel:+21651884577" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 font-semibold">
                 Appeler maintenant
               </a>
-              <Link href="/products" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass hover:bg-white/10 font-semibold">
+              <Link href="/products" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass hover: font-semibold">
                 Voir les produits
               </Link>
             </div>

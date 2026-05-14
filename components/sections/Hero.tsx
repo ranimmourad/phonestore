@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Wrench, Sparkles, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Wrench, Sparkles } from "lucide-react";
 import { useLang } from "@/lib/lang";
 
 export default function Hero() {
@@ -13,8 +13,8 @@ export default function Hero() {
       {/* Background layers */}
       <div className="absolute inset-0 grid-bg opacity-30" />
       <div className="absolute inset-0 bg-radial-fade" />
-      <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full bg-brand-600/30 blur-[120px] animate-float-slow" />
-      <div className="absolute bottom-10 -right-24 w-[360px] h-[360px] rounded-full bg-brand-500/30 blur-[120px] animate-float" />
+      <div className="absolute top-1/3 -left-32 w-[420px] h-[420px] rounded-full bg-brand-600/30 blur-[120px]" />
+      <div className="absolute bottom-10 -right-24 w-[360px] h-[360px] rounded-full bg-brand-500/30 blur-[120px]" />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-ink-900" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
@@ -57,14 +57,14 @@ export default function Hero() {
           >
             <Link
               href="/products"
-              className="btn-glow group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 font-semibold text-white transition shadow-[0_10px_40px_-10px_rgba(11,103,255,.8)]"
+              className="btn-glow group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 font-semibold text-white transition"
             >
               {t("cta_shop")}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass hover:bg-white/10 font-semibold transition"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass hover: font-semibold transition"
             >
               <Wrench size={18} className="text-brand-300" />
               {t("cta_repair")}
@@ -105,64 +105,12 @@ export default function Hero() {
             <div className="absolute w-[220px] h-[220px] rounded-full bg-brand-500/10 blur-2xl" />
           </div>
 
-          {/* Center logo */}
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute inset-0 grid place-items-center"
-          >
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-[2.5rem] overflow-hidden ring-2 ring-brand-500/40 shadow-[0_0_80px_rgba(11,103,255,.45)] glass">
+          {/* Center logo (No more floating animation) */}
+          <div className="absolute inset-0 grid place-items-center">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-[2.5rem] overflow-hidden ring-2 ring-brand-500/40">
               <Image src="/logo.png" alt="Logo" fill priority className="object-cover" />
             </div>
-          </motion.div>
-
-          {/* Floating cards */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 }}
-            className="absolute top-6 left-0 sm:left-6 glass-strong rounded-2xl p-3 sm:p-4 flex items-center gap-3 animate-float"
-          >
-            <div className="w-10 h-10 grid place-items-center rounded-xl bg-brand-500/30 text-brand-300">
-              <Zap size={18} />
-            </div>
-            <div>
-              <div className="text-xs text-white/60">Service rapide</div>
-              <div className="font-semibold text-sm">24h chrono</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.75 }}
-            className="absolute top-1/2 right-0 sm:right-2 glass-strong rounded-2xl p-3 sm:p-4 flex items-center gap-3 animate-float-slow"
-          >
-            <div className="w-10 h-10 grid place-items-center rounded-xl bg-brand-500/30 text-brand-300">
-              <ShieldCheck size={18} />
-            </div>
-            <div>
-              <div className="text-xs text-white/60">Garantie</div>
-              <div className="font-semibold text-sm">Pièces d'origine</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="absolute bottom-4 left-4 sm:left-10 glass-strong rounded-2xl px-4 py-3 flex items-center gap-3 animate-float"
-          >
-            <div className="flex -space-x-2">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="w-7 h-7 rounded-full ring-2 ring-ink-900 bg-gradient-to-br from-brand-400 to-brand-700" />
-              ))}
-            </div>
-            <div>
-              <div className="text-xs text-white/60">+5000 clients</div>
-              <div className="font-semibold text-sm">satisfaits</div>
-            </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

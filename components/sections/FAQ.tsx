@@ -59,7 +59,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-white/5 transition"
+                className="w-full flex items-center justify-between gap-4 p-5 text-left hover: transition"
               >
                 <span className="font-medium">{f.q}</span>
                 <ChevronDown

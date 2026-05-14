@@ -169,7 +169,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setNotif(false)}
-              className="relative p-2.5 rounded-xl glass hover:bg-white/10"
+              className="relative p-2.5 rounded-xl glass hover:"
               aria-label="Notifications"
             >
               <Bell size={16} />
@@ -179,7 +179,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                 </span>
               )}
             </button>
-            <button onClick={onLogout} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl glass hover:bg-white/10 text-sm">
+            <button onClick={onLogout} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl glass hover: text-sm">
               <LogOut size={14} /> Déconnexion
             </button>
           </div>
@@ -198,7 +198,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                 key={t.k}
                 onClick={() => setTab(t.k as any)}
                 className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition whitespace-nowrap ${
-                  tab === t.k ? "bg-brand-500 text-white" : "glass text-white/70 hover:bg-white/10"
+                  tab === t.k ? "bg-brand-500 text-white" : "glass text-white/70 hover:"
                 }`}
               >
                 <I size={15} /> {t.l}
@@ -307,7 +307,7 @@ function OrdersPanel({ orders, refresh }: { orders: Order[]; refresh: () => void
             key={s}
             onClick={() => setFilter(s as any)}
             className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
-              filter === s ? "bg-brand-500" : "glass hover:bg-white/10"
+              filter === s ? "bg-brand-500" : "glass hover:"
             }`}
           >
             {s === "all" ? "Toutes" : s}
@@ -361,7 +361,7 @@ function OrdersPanel({ orders, refresh }: { orders: Order[]; refresh: () => void
                   Annuler
                 </button>
               )}
-              <button onClick={() => del(o.id)} className="text-xs px-3 py-1.5 rounded-lg glass hover:bg-white/10 ml-auto">
+              <button onClick={() => del(o.id)} className="text-xs px-3 py-1.5 rounded-lg glass hover: ml-auto">
                 <Trash2 size={12} className="inline mr-1" /> Supprimer
               </button>
             </div>
@@ -422,7 +422,7 @@ function ProductsPanel({ products, refresh }: { products: Product[]; refresh: ()
           </thead>
           <tbody>
             {filtered.map((p) => (
-              <tr key={p.id} className="border-t border-white/5 hover:bg-white/5">
+              <tr key={p.id} className="border-t border-white/5 hover:">
                 <td className="p-3">
                   <div className="flex items-center gap-3">
                     <img src={p.image} alt="" className="w-10 h-10 rounded-lg object-cover" />
@@ -438,10 +438,10 @@ function ProductsPanel({ products, refresh }: { products: Product[]; refresh: ()
                   <span className={p.stock > 0 ? "text-emerald-300" : "text-red-300"}>{p.stock}</span>
                 </td>
                 <td className="p-3 text-right">
-                  <button onClick={() => setEditing(p)} className="p-2 rounded-lg hover:bg-white/10 mr-1">
+                  <button onClick={() => setEditing(p)} className="p-2 rounded-lg hover: mr-1">
                     <Edit3 size={14} className="text-brand-300" />
                   </button>
-                  <button onClick={() => del(p.id)} className="p-2 rounded-lg hover:bg-white/10">
+                  <button onClick={() => del(p.id)} className="p-2 rounded-lg hover:">
                     <Trash2 size={14} className="text-red-400" />
                   </button>
                 </td>
@@ -509,7 +509,7 @@ function ProductForm({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-md grid place-items-center p-4"
+      className="fixed inset-0 z-[100] bg-black/70 grid place-items-center p-4"
       onClick={onClose}
     >
       <motion.form
@@ -521,7 +521,7 @@ function ProductForm({
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-display text-xl font-bold">{product ? "Modifier" : "Nouveau"} produit</h3>
-          <button type="button" onClick={onClose} className="p-2 hover:bg-white/10 rounded-lg"><X size={16} /></button>
+          <button type="button" onClick={onClose} className="p-2 hover: rounded-lg"><X size={16} /></button>
         </div>
 
         <div className="space-y-3 text-sm">

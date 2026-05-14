@@ -42,7 +42,7 @@ export default function ProductCard({
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-transparent to-transparent" />
 
         {product.badge && (
-          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest bg-brand-500 text-white shadow-[0_0_20px_rgba(11,103,255,.7)]">
+          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest bg-brand-500 text-white">
             {product.badge}
           </div>
         )}

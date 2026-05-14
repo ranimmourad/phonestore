@@ -73,7 +73,7 @@ export default function Services() {
                 className="group relative rounded-2xl p-6 glass overflow-hidden"
               >
                 <div className={`absolute -top-20 -right-20 w-48 h-48 rounded-full bg-gradient-to-br ${s.color} opacity-20 blur-2xl group-hover:opacity-40 transition`} />
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.color} grid place-items-center shadow-[0_10px_30px_-10px_rgba(11,103,255,.6)] mb-5 group-hover:scale-110 transition`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${s.color} grid place-items-center mb-5 group-hover:scale-110 transition`}>
                   <I size={24} />
                 </div>
                 <h3 className="font-display font-semibold text-lg">{s.title}</h3>

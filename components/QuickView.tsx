@@ -24,7 +24,7 @@ export default function QuickView({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-md grid place-items-center p-4"
+          className="fixed inset-0 z-[100] bg-black/70 grid place-items-center p-4"
           onClick={onClose}
         >
           <motion.div
@@ -83,14 +83,14 @@ export default function QuickView({
                   <div className="flex items-center gap-1 glass rounded-xl p-1">
                     <button
                       onClick={() => setQty(Math.max(1, qty - 1))}
-                      className="w-9 h-9 grid place-items-center rounded-lg hover:bg-white/10"
+                      className="w-9 h-9 grid place-items-center rounded-lg hover:"
                     >
                       <Minus size={14} />
                     </button>
                     <div className="w-10 text-center font-semibold">{qty}</div>
                     <button
                       onClick={() => setQty(qty + 1)}
-                      className="w-9 h-9 grid place-items-center rounded-lg hover:bg-white/10"
+                      className="w-9 h-9 grid place-items-center rounded-lg hover:"
                     >
                       <Plus size={14} />
                     </button>

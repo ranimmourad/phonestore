@@ -20,7 +20,7 @@ export default function FloatingActions() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.7 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-12 h-12 rounded-full glass-strong hover:bg-brand-500 grid place-items-center transition shadow-lg"
+            className="w-12 h-12 rounded-full glass-strong hover:bg-brand-500 grid place-items-center transition"
             aria-label="Up"
           >
             <ArrowUp size={18} />
@@ -32,7 +32,7 @@ export default function FloatingActions() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         href="tel:+21654663209"
-        className="w-12 h-12 rounded-full bg-brand-500 hover:bg-brand-400 grid place-items-center shadow-[0_0_30px_rgba(11,103,255,.6)]"
+        className="w-12 h-12 rounded-full bg-brand-500 hover:bg-brand-400 grid place-items-center "
         aria-label="Call"
       >
         <Phone size={18} />
@@ -44,7 +44,7 @@ export default function FloatingActions() {
         href="https://wa.me/21654663209?text=Bonjour%20Phone%20Store%20Mourouj%206%2C%20je%20souhaite%20avoir%20plus%20d%27informations."
         target="_blank"
         rel="noopener noreferrer"
-        className="relative w-14 h-14 rounded-full grid place-items-center shadow-[0_0_30px_rgba(37,211,102,.55)] bg-[#25D366] hover:bg-[#1ebd5a]"
+        className="relative w-14 h-14 rounded-full grid place-items-center  bg-[#25D366] hover:bg-[#1ebd5a]"
         aria-label="WhatsApp"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />

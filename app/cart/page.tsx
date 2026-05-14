@@ -56,11 +56,11 @@ export default function CartPage() {
                         <Trash2 size={16} />
                       </button>
                       <div className="flex items-center gap-1 glass rounded-lg p-1">
-                        <button onClick={() => update(it.id, it.qty - 1)} className="w-7 h-7 grid place-items-center rounded-md hover:bg-white/10">
+                        <button onClick={() => update(it.id, it.qty - 1)} className="w-7 h-7 grid place-items-center rounded-md hover:">
                           <Minus size={12} />
                         </button>
                         <div className="w-8 text-center text-sm font-semibold">{it.qty}</div>
-                        <button onClick={() => update(it.id, it.qty + 1)} className="w-7 h-7 grid place-items-center rounded-md hover:bg-white/10">
+                        <button onClick={() => update(it.id, it.qty + 1)} className="w-7 h-7 grid place-items-center rounded-md hover:">
                           <Plus size={12} />
                         </button>
                       </div>
@@ -99,7 +99,7 @@ export default function CartPage() {
                 </Link>
                 <Link
                   href="/products"
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl glass hover:bg-white/10 text-sm font-semibold"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl glass hover: text-sm font-semibold"
                 >
                   Continuer mes achats
                 </Link>

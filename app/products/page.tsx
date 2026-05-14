@@ -65,7 +65,7 @@ function ProductsContent() {
                 <button
                   onClick={() => setCat("all")}
                   className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
-                    cat === "all" ? "bg-brand-500 text-white" : "hover:bg-white/5 text-white/70"
+                    cat === "all" ? "bg-brand-500 text-white" : "hover text-white/70"
                   }`}
                 >
                   Toutes les catégories
@@ -75,7 +75,7 @@ function ProductsContent() {
                     key={c.id}
                     onClick={() => setCat(c.id)}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
-                      cat === c.id ? "bg-brand-500 text-white" : "hover:bg-white/5 text-white/70"
+                      cat === c.id ? "bg-brand-500 text-white" : "hover: text-white/70"
                     }`}
                   >
                     {c.name}
@@ -94,7 +94,7 @@ function ProductsContent() {
                     key={o.v}
                     onClick={() => setSort(o.v as any)}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition ${
-                      sort === o.v ? "bg-brand-500 text-white" : "hover:bg-white/5 text-white/70"
+                      sort === o.v ? "bg-brand-500 text-white" : "hover: text-white/70"
                     }`}
                   >
                     {o.l}
@@ -114,7 +114,7 @@ function ProductsContent() {
 
           {/* Mobile filter overlay */}
           {mobileFilter && (
-            <div className="lg:hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-md p-4" onClick={() => setMobileFilter(false)}>
+            <div className="lg:hidden fixed inset-0 z-50 bg-black/70 p-4" onClick={() => setMobileFilter(false)}>
               <div className="glass-strong rounded-2xl p-5 mt-20" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold">Filtres</h3>

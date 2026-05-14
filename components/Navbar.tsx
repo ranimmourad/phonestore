@@ -31,12 +31,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-2 bg-ink-900/80 backdrop-blur-xl border-b border-white/5" : "py-4 bg-transparent"
+        scrolled ? "py-2 bg-ink-900/80 border-b border-white/5" : "py-4 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-11 h-11 rounded-xl overflow-hidden ring-1 ring-brand-500/40 group-hover:ring-brand-400 transition shadow-[0_0_30px_rgba(11,103,255,.35)]">
+          <div className="relative w-11 h-11 rounded-xl overflow-hidden ring-1 ring-brand-500/40 group-hover:ring-brand-400 transition ">
             <Image src="/logo.png" alt="Phone Store Mourouj 6" fill sizes="44px" className="object-cover" />
           </div>
           <div className="leading-tight">
@@ -62,7 +62,7 @@ export default function Navbar() {
           <div className="relative">
             <button
               onClick={() => setLangOpen((v) => !v)}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg glass text-xs font-semibold uppercase tracking-wider hover:bg-white/10"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-lg glass text-xs font-semibold uppercase tracking-wider hover:"
             >
               <Globe size={14} /> {lang}
             </button>
@@ -88,21 +88,21 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <Link href="/products" className="hidden md:inline-flex p-2 rounded-lg glass hover:bg-white/10">
+          <Link href="/products" className="hidden md:inline-flex p-2 rounded-lg glass hover:">
             <Search size={18} />
           </Link>
 
-          <Link href="/cart" className="relative p-2 rounded-lg glass hover:bg-white/10">
+          <Link href="/cart" className="relative p-2 rounded-lg glass hover:">
             <ShoppingBag size={18} />
             {count > 0 && (
-              <span className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full bg-brand-500 text-[10px] font-bold flex items-center justify-center shadow-[0_0_10px_rgba(11,103,255,.8)]">
+              <span className="absolute -top-1 -right-1 min-w-[20px] h-5 px-1 rounded-full bg-brand-500 text-[10px] font-bold flex items-center justify-center [0_0_10px_rgba(11,103,255,.8)]">
                 {count}
               </span>
             )}
           </Link>
 
           <button
-            className="lg:hidden p-2 rounded-lg glass hover:bg-white/10"
+            className="lg:hidden p-2 rounded-lg glass hover:"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
           >
@@ -117,7 +117,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden bg-ink-900/95 backdrop-blur-xl border-t border-white/5"
+            className="lg:hidden overflow-hidden bg-ink-900/95 border-t border-white/5"
           >
             <div className="px-4 py-4 flex flex-col gap-1">
               {links.map((l) => (
@@ -125,7 +125,7 @@ export default function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-4 py-3 rounded-lg hover:bg-white/5 text-sm"
+                  className="px-4 py-3 rounded-lg hover: text-sm"
                 >
                   {l.label}
                 </Link>
