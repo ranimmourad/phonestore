@@ -7,6 +7,9 @@ import { Toaster } from "react-hot-toast";
 import { LangProvider } from "@/lib/lang";
 
 export const metadata: Metadata = {
+  // Added this line to fix the warning:
+  metadataBase: new URL("https://phonestore-khaki.vercel.app"),
+  
   title: "Phone Store Mourouj 6 — Accessoires & Réparation Premium",
   description:
     "Phone Store Mourouj 6 — Réparation téléphones & PC, accessoires premium, service technique rapide à El Mourouj 2074. Boutique tech de confiance en Tunisie.",
