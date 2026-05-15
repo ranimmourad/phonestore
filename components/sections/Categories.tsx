@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import { categories } from "@/data/products";
